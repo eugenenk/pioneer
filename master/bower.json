@@ -1,0 +1,21 @@
+{
+  "name": "Pioneer",
+  "authors": [
+    "Eugene <eugene.nk@mail.com>"
+  ],
+  "description": "",
+  "main": "bower.json",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.98.0"
+  }
+}

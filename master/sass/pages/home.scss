@@ -1,0 +1,129 @@
+/* Home Page SCSS */
+$h-header-height: 100vh;
+
+$h-slide-left-min-height: 80vh;
+$h-slide-right-min-height: 80vh;
+$h-slide-padding: 20px;
+$h-slide-left-presentation-top: 30vh;
+$h-slide-left-presentation-padding: 0 calc(28px - 0.75rem);
+
+$h-description-height: 60vh;
+$h-description-padding: 20px;
+$h-slide-left-presentation-padding: 0 calc(28px - 0.75rem);
+$h-slide-left-presentation-top: 20vh;
+
+$h-contact-height: 50vh;
+
+.home-header{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: $h-header-height;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: relative;
+    background-image: url("/img/bg-header.jpg");
+
+    .button-collapse{
+        cursor: pointer;
+    }
+}
+
+.home-slide{
+    width: 100%;
+    padding: $h-slide-padding;    
+
+    .block__two-column--left{
+        background-image: url("/img/image-x.jpg");        
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: $h-slide-left-min-height;
+    }
+
+    .block__presentation{
+        padding: $h-slide-left-presentation-padding;
+        width: 100%;
+        margin-top: $h-slide-left-presentation-top;
+        text-align: left;
+    }
+
+    .block__presentation__leading{
+        margin-left: 0;
+        color: $dark;
+    }
+
+    .block__presentation__title{
+        margin-left: 0;
+        color: $dark;
+    }
+
+    .block__two-column--right{
+        min-height: $h-slide-right-min-height;
+        padding: 0;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.home-description{
+    background: $gunmetal;
+    height: $h-description-height;
+    padding: $h-description-padding;    
+    margin-bottom: 0;
+
+    .block__presentation{
+        padding: $h-slide-left-presentation-padding;
+        margin-top: $h-slide-left-presentation-top;
+        text-align: left;
+    }
+    .block__presentation__leading,
+    .block__presentation__title{
+        margin-left: 0;
+    }
+}
+
+.home-contact{
+    .block__three-column{
+        height: $h-contact-height;
+    }
+
+    .block__three-column--first{
+        display: table;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("/img/contact-left.jpg");
+    }
+    .block__three-column--second{
+        padding: 0;
+    }
+    .block__three-column--third{
+        display: table;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;        
+        background-image: url("/img/contact-right.jpg");
+   }
+
+   .block__icon--sm-logo{
+        display: table-cell;
+   }
+
+   .contact-card{
+        height: 50%;
+   }
+}
+
+
+@media #{$medium-and-down} {
+}
+
+@media #{$small-and-down} {
+    .home-description{
+        .block__presentation{
+            margin-top: 0;
+        }
+    }
+}

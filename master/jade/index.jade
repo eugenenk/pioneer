@@ -1,0 +1,106 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Pioneer
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(content='width=device-width, initial-scale=1', name='viewport')
+        meta(content='', name='description')
+        meta(content='', name='author')
+        // BEGIN GLOBAL MANDATORY STYLES
+        link(href='../css/base.css', rel='stylesheet', type='text/css')
+        link(href='../css/app.css', rel='stylesheet', type='text/css')
+        // END GLOBAL MANDATORY STYLES
+        link(rel='shortcut icon', href='../img/favicon.ico')
+        script(src='../js/base.js', type='text/javascript')
+        script(src='../js/app.js', type='text/javascript')
+    body
+        ul#slide-out.side-nav.navoverlay
+            li.navoverlay__navicon
+                a(href="#")
+                    i.icon-nav-back
+                i.icon-navbar-logo
+            li.navoverlay__title
+                | Welcome...
+            li.navoverlay__navlist
+                a.navoverlay__navlink
+                    | About Us...
+                span.navoverlay__description
+                    | Our Story and Services.
+            li.navoverlay__navlist
+                a.navoverlay__navlink
+                    | Journey...
+                span.navoverlay__description
+                    | Adventure is a stable in our cutlure.
+            li.navoverlay__navlist
+                a.navoverlay__navlink
+                    | Discoveries...
+                span.navoverlay__description
+                    | Some of our favourite projects.
+            li.navoverlay__navlist
+                a.navoverlay__navlink
+                    | Ahoy!...
+                span.navoverlay__description
+                    | We'd love to hear from you.
+            li
+                .navoverlay__divider  
+            li.navoverlay__footer
+                i.icon-insta 
+                |  |   ahoy@
+
+        .block.home-header
+            .block__nav
+                i.icon-nav.button-collapse(data-activates='slide-out')
+                i.icon-navbar-logo
+            .block__presentation
+                .block__presentation__leading
+                    b We are Pioneer. 
+                    | A seasoned crew of creatives with an apetite to craft new, or evolve existing brands toward discovering  their true potentials.
+                .block__presentation__title Advenutre Awaits
+        .block.home-slide
+            .block__two-column.block__two-column--left
+                .block__presentation
+                    .block__presentation__leading
+                        | We pride ourselves on the challenges we have triumpged for all our great clients.  Take a look at some of our favourite discovers to date.
+                    .block__presentation__title Discoveries...
+            .block__two-column.block__two-column--right.carousel.carousel-slider
+                a.carousel-item(href="#one!")
+                    img(src="/img/rotating-images.jpg")
+                a.carousel-item(href="#two!")
+                    img(src="/img/rotating-images-2.jpg")
+                a.carousel-item(href="#thee!")
+                    img(src="/img/rotating-images-3.jpg")
+        .block.home-description
+            .block__one-column
+                .block__presentation
+                    .block__presentation__leading
+                        | If you're thinking aboutu climbing aboard, we'd love to hear from you and dicuss the challenges you may be facing this year.  We'd love to help you solve them.
+                    .block__presentation__title
+                        | Challenge Accepted...
+        .block.home-contact
+            .block__three-column.block__three-column--first
+                .block__icon.block__icon--sm-logo
+                    i.icon-logo-badge
+            .block__three-column.block__three-column--second
+                .contact-card.contact-card--white
+                    .contact-card__wrapper
+                        span.contact-card__header
+                            | Letters!
+                        .contact-card__divider
+                        span.contact-card__link
+                            | ahoy@pioneerinc.ca
+                .contact-card.contact-card--reddish
+                    .contact-card__wrapper
+                        span.contact-card__header
+                            | Hello!
+                        .contact-card__divider
+                        span.contact-card__link
+                            | +1 2892426061
+            .block__three-column.block__three-column--third
+                .block__icon.block__icon--sm-logo
+                    i.icon-insta
+        footer
+            .footer__logo
+                i.icon-navbar-logo
+            .footer__description
+                | Lets’s Disocover yoru Brand’s True Potential

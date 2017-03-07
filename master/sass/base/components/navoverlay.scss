@@ -1,0 +1,96 @@
+$nav-logo-size: 26px;
+$nav-logo-color: $white;
+$nav-logo-padding: 0 6px;
+$nav-padding: 0 38px;
+$nav-title-top: 70px;
+$nav-list-top: 10px;
+$nav-list-padding: 0 10px !important;
+$nav-list-small-height: 36px !important;
+
+$nav-devider-height: 1px;
+$nav-devider-bottom: 35px;
+
+$nav-footer-icon-size: 22px;
+
+.navoverlay{
+    background: $dark-grey-second !important;
+    width: 100% !important;
+    padding: $nav-padding !important;
+}
+
+.navoverlay__navicon{
+    position: absolute;
+    left: 13px;
+    top: 20px;
+    display: block;
+    font-size: $nav-logo-size;
+    color: $nav-logo-color;        
+    a{            
+        display: inline;
+        font-size: $nav-logo-size;
+        padding: $nav-logo-padding;
+        cursor: pointer;
+        i{
+            margin: 0 !important;
+            color: $nav-logo-color !important;  
+        }
+    }
+}
+
+.navoverlay__title{
+    color: $grey-normal-second;
+    font-family: $museosans-light;
+    font-size: $font-size-base;
+    margin-top: $nav-title-top;
+    padding: $nav-list-padding;
+}
+
+.navoverlay__navlist{
+    margin-top: $nav-list-top;
+}
+
+.navoverlay__navlink{
+    color: $white !important;
+    font-family: $museosans-regular;
+    font-size: $font-size-small !important;
+    padding: $nav-list-padding;
+    cursor: pointer;
+}
+
+.navoverlay__description{
+    color: $grey-normal-second !important;
+    font-family: $museosans-light;
+    font-size: $font-size-small;
+    padding: $nav-list-padding;
+    vertical-align: top;
+    line-height: $font-height-small;
+}
+
+.navoverlay__divider{
+    height: $nav-devider-height;
+    background: $warm-grey;
+    width: 60%;
+    margin-bottom: $nav-devider-bottom;
+}
+
+.navoverlay__footer{
+    font-family: $museosans-regular;
+    font-size: $font-size-base;
+    color: $warm-grey;
+    i{
+        color: $warm-grey;
+        font-size: $nav-footer-icon-size;
+    }
+}
+
+
+@media #{$small-and-down} {
+    .navoverlay__navlist{
+        line-height: $nav-list-small-height;
+    }
+
+    .navoverlay__navlink{
+        height: $nav-list-small-height;
+        line-height: $nav-list-small-height;
+    }
+}

@@ -1,0 +1,37 @@
+
+$footer-height: 200px;
+$footer-padding-left: 48px;
+
+$footer-logo-top: 90px;
+$footer-logo-small-top: 40px;
+$footer-logo-size: 26px;
+$footer-logo-color: $white;
+
+$footer-color: $reddish-grey;
+$footer-text-top: 10px;
+
+footer{
+    height: $footer-height;
+    background: $dark-grey;
+    color: $reddish-grey;
+    padding-left: $footer-padding-left;
+}
+
+.footer__logo{
+    color: $footer-logo-color;
+    padding-top: $footer-logo-top;
+    font-size: $footer-logo-size;
+}
+
+.footer__description{
+    color: $footer-color;
+    font-family: $museosans-regular;
+    font-size: $font-size-medium;
+    padding-top: $footer-text-top;
+}
+
+@media #{$small-and-down} {
+    .footer__logo{
+        padding-top: $footer-logo-small-top;
+    }
+}

@@ -1,0 +1,152 @@
+/* ========================================================================
+   Component: block.scss
+ ========================================================================== */
+
+$nav-logo-size: 26px;
+$nav-logo-color: $white;
+
+$block-leading-bottom: 30px;
+$block-left: 48px;
+
+$block-icon-size: 88px;
+
+.block{
+    @extend .row;
+    margin-bottom:0; 
+}
+
+.block__one-column{
+    @extend .col;
+    @extend .l12;
+    @extend .m12;
+    @extend .s12;
+}
+
+.block__two-column{
+    @extend .col;
+    @extend .l6;
+    @extend .m12;
+    @extend .s12;
+}
+
+.block__three-column{
+    @extend .col;
+    @extend .l4;
+    @extend .m12;
+    @extend .s12;    
+}
+
+.block__nav{
+    position: absolute;
+    left: 13px;
+    top: 20px;
+    display: block;
+    font-size: $nav-logo-size;
+    color: $nav-logo-color;
+}
+
+.block__presentation{
+    position: relative;
+    width: 70%;
+    top: 40%;
+}
+
+.block__presentation__leading{
+    font-family: $museosans-light;
+    font-size: $font-size-base;
+    color: $white;
+    line-height: $font-height-base;
+    margin-bottom: $block-leading-bottom;
+    margin-left: $block-left;
+}
+
+.block__presentation__title{
+    font-family: $parabola-regular;
+    font-size: $font-size-large;
+    color: $white;
+    line-height: $font-height-large;
+    margin-left: $block-left;
+}
+
+.block__icon--sm-logo{
+    font-size: $block-icon-size;
+    color: $white;    
+    text-align: center;
+    vertical-align: middle;
+}
+
+.contact-card{
+    text-align: center;
+    @extend .row;
+    margin-bottom:0; 
+    display: table;
+    width: 100%;
+}
+
+.contact-card--white{
+    background: $white;    
+    .contact-card__header{
+        color: $brownish-grey;
+    }
+}
+
+.contact-card--reddish{
+    background: $reddish-grey;    
+    .contact-card__header{
+        color: $white;
+    }
+}
+
+.contact-card__header{
+    font-size: $font-size-base;
+    font-family: $museosans-regular;
+}
+
+.contact-card__divider{
+    margin: 15px auto; 
+    width: 50%;
+    height: 2px;
+    background: $dark-grey;
+}
+
+.contact-card__link{
+    font-size: $font-size-medium;
+    font-family: $museosans-regular;
+    color: $dark;
+}
+
+.contact-card__wrapper{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+@media #{$medium-and-down} {
+    .block__presentation{
+        width: 90%;
+        top: 40%;        
+    }
+
+    .block__presentation__leading{
+        font-size: $font-size-base;
+    }
+
+    .block__presentation__title{
+        font-size: $font-size-large;
+    }
+}
+
+@media #{$small-and-down} {
+    .block__presentation{
+        width: 90%;
+        top: 40%;        
+    }
+
+    .block__presentation__leading{
+        font-size: $font-size-small;
+    }
+
+    .block__presentation__title{
+        font-size: $font-size-base;
+    }
+}
