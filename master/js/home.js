@@ -31,8 +31,9 @@ pioneer.home = function() {
         $('.home-slide .block__two-column--left').height(leftHeight);
         if(vpWidth >= 600 )
             $('.home-slide .block__two-column--right').height(leftHeight);
-        else
-            $('.home-slide .block__two-column--right').css("height: auto;");
+        else{
+            $('.home-slide .block__two-column--right').css("height: auto;");            
+        }
     }
 
     function adjustThreeColumnWidth(){

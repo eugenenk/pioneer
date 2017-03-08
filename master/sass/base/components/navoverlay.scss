@@ -14,6 +14,20 @@ $nav-devider-bottom:    35px;
 
 $nav-footer-icon-size:  22px;
 
+.nav-bar{
+    position: absolute;
+    left: 13px;
+    top: 20px;
+    display: block;
+    font-size: $nav-logo-size;
+    color: $nav-logo-color;
+    z-index: 100;
+    
+    .button-collapse{
+        cursor: pointer;
+    }    
+}
+
 .navoverlay{
     background: $dark-grey-second !important;
     width: 100% !important;

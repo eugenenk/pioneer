@@ -52,33 +52,34 @@ html
                 i.icon-insta 
                 |  |   ahoy@
 
+        .nav-bar
+            i.icon-nav.button-collapse(data-activates='slide-out')
+            i.icon-navbar-logo
+
         .block.home-header
-            .block__nav
-                i.icon-nav.button-collapse(data-activates='slide-out')
-                i.icon-navbar-logo
-            .presentation.container
-                .presentation__leading
-                    b We are Pioneer. 
-                    | A seasoned crew of creatives with an apetite to craft new, or evolve existing brands toward discovering  their true potentials.
-                .presentation__title Advenutre Awaits
-        .block.home-slide.container
-            .block__two-column.block__two-column--left.carousel.carousel-slider
-                a.carousel-item(href="#one!")
-                    img(src="/img/rotating-images.jpg")
-                a.carousel-item(href="#two!")
-                    img(src="/img/rotating-images-2.jpg")
-                a.carousel-item(href="#thee!")
-                    img(src="/img/rotating-images-3.jpg")
-            .block__two-column.block__two-column--right
-                .discover-back
-                    img(src="/img/image-x.jpg")
+            .block__container
                 .presentation
                     .presentation__leading
-                        | We pride ourselves on the challenges we have triumpged for all our great clients.  Take a look at some of our favourite discovers to date.
-                    .presentation__title Discoveries...
+                        b We are Pioneer. 
+                        | A seasoned crew of creatives with an apetite to craft new, or evolve existing brands toward discovering  their true potentials.
+                    .presentation__title Advenutre Awaits
+        .block.home-slide
+            .block__container
+                .block__two-column.block__two-column--left.carousel.carousel-slider
+                    a.carousel-item(href="#one!")
+                        img(src="/img/rotating-images.jpg")
+                    a.carousel-item(href="#two!")
+                        img(src="/img/rotating-images-2.jpg")
+                    a.carousel-item(href="#thee!")
+                        img(src="/img/rotating-images-3.jpg")
+                .block__two-column.block__two-column--right
+                    .presentation
+                        .presentation__leading
+                            | We pride ourselves on the challenges we have triumpged for all our great clients.  Take a look at some of our favourite discovers to date.
+                        .presentation__title Discoveries...
         .block.home-description
-            .block__one-column
-                .presentation.container
+            .block__container
+                .presentation
                     .presentation__leading
                         | If you're thinking aboutu climbing aboard, we'd love to hear from you and dicuss the challenges you may be facing this year.  We'd love to help you solve them.
                     .presentation__title

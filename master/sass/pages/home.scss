@@ -1,5 +1,8 @@
 /* Home Page SCSS */
 $h-header-height:                   100vh;
+$h-header-container:                100%;
+$h-header-margin-md:                0 0 0 48px !important;
+$h-header-margin-sm:                0 0 0 24px !important;
 
 $h-slide-min-height-lg:             0vh;
 $h-slide-min-height-md:             0vh;
@@ -13,26 +16,16 @@ $h-description-presentation-gap:    100px;
 $h-description-height:              60vh;
 $h-description-padding:             20px 0;
 
-$h-slide-left-presentation-top-lg:  20%;
-$h-slide-left-presentation-top-md:  15%;
-$h-slide-left-presentation-top-sm:  15%;
+$h-slide-left-presentation-top-lg:  0;
+$h-slide-left-presentation-top-md:  0;
+$h-slide-left-presentation-top-sm:  0;
+
+$h-slide-x-image-size-md:           200px;
+$h-slide-x-image-size-lg:           270px;
 
 $h-contact-height-lg:               480px;
 $h-contact-height-md:               320px;
 $h-contact-height-sm:               270px;
-
-$h-discover-back-width-lg:          270px;
-$h-discover-back-width-md:          220px;
-$h-discover-back-width-sm:          170px;
-
-$h-discover-back-top-lg:            10%;
-$h-discover-back-left-lg:           0%;
-
-$h-discover-back-top-md:            10%;
-$h-discover-back-left-md:           5%;
-
-$h-discover-back-top-sm:            20%;
-$h-discover-back-left-sm:           15%;
 
 $h-slide-left-padding-lg:           80px;
 $h-slide-left-padding-md:           40px;
@@ -49,40 +42,31 @@ $h-slide-left-padding-sm:           20px;
     position: relative;
     background-image: url("/img/bg-header.jpg");
 
-    .button-collapse{
-        cursor: pointer;
-    }
-
-    .parallax-container{
-        height: 500px;
+    .block__container{
+        height: $h-header-container;
     }
 }
 
 .home-slide{
-    padding: $h-slide-padding;
-
-    .discover-back{
-        position: absolute;
-        margin-top: $h-discover-back-top-lg;
-        margin-left: $h-discover-back-left-lg;
-        img{
-            width: $h-discover-back-width-lg;
-        }
-    }
+    padding: $h-slide-padding;    
 
     .block__two-column--right{
-        /*background-image: url("/img/image-x.jpg");*/
+        background-image: url("/img/image-x.jpg");
         margin-left: -100%;
         background-position: center center;
         background-repeat: no-repeat;
         min-height: $h-slide-min-height-lg;
         padding-right: $h-slide-left-padding-lg;
+        background-size: $h-slide-x-image-size-lg;
+        display: table;        
     }
 
     .presentation{
         width: 100%;
         top: $h-slide-left-presentation-top-lg;
         text-align: left;
+        display: table-cell;
+        vertical-align: middle;
     }
 
     .presentation__leading{
@@ -115,6 +99,7 @@ $h-slide-left-padding-sm:           20px;
         margin-top: $h-description-presentation-gap;
         margin-bottom: $h-description-presentation-gap;
         text-align: left;
+        top: 0;
     }
     .presentation__leading,
     .presentation__title{
@@ -164,18 +149,11 @@ $h-slide-left-padding-sm:           20px;
         .block__two-column--right{
             padding-right: $h-slide-left-padding-md;
             min-height: $h-slide-min-height-md;
+            background-size: $h-slide-x-image-size-md;
         }
 
         .block__two-column--left{
             min-height: $h-slide-min-height-md;
-        }
-
-        .discover-back{
-            margin-top: $h-discover-back-top-md;
-            margin-left: $h-discover-back-left-md;
-            img{
-                width: $h-discover-back-width-md;
-            }
         }
     }
 
@@ -184,9 +162,21 @@ $h-slide-left-padding-sm:           20px;
             height: $h-contact-height-md;
         }
     }    
+
+    .home-header{
+        .block__container{
+            margin: $h-header-margin-md; 
+        }
+    }
 }
 
 @media #{$small-and-down} {
+    .home-header{
+        .block__container{
+            margin: $h-header-margin-sm; 
+        }
+    }
+
     .home-description{
         .presentation{
             margin-top: $h-description-presentation-gap / 2;
@@ -209,14 +199,7 @@ $h-slide-left-padding-sm:           20px;
             margin-left: 0;
             padding-right: $h-slide-left-padding-sm;            
             min-height: $h-slide-min-height-xsm;
-        }
-
-        .discover-back{
-            margin-top: $h-discover-back-top-sm;
-            margin-left: $h-discover-back-left-sm;
-            img{
-                width: $h-discover-back-width-sm;
-            }
+            background-size: $h-slide-x-image-size-md;
         }
     }
 

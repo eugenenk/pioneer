@@ -2,18 +2,28 @@
    Component: block.scss
  ========================================================================== */
 
-$nav-logo-size: 26px;
-$nav-logo-color: $white;
+$nav-logo-size:             26px;
+$nav-logo-color:            $white;
 
-$block-leading-bottom: 30px;
-$block-left: 0px;
+$block-leading-bottom:      30px;
+$block-left:                0px;
 
-$block-icon-size: 88px;
-$block-icon-shadow: 2px 2px 8px $dark-grey-second;
+$block-icon-size:           88px;
+$block-icon-shadow:         2px 2px 8px $dark-grey-second;
+
+$presentation-max-width:    670px;
+
+$presentation-top-lg:       250px;
+$presentation-top-md:       250px;
+$presentation-top-sm:       150px;
 
 .block{
     @extend .row;
     margin-bottom:0; 
+}
+
+.block__container{
+    @extend .container;
 }
 
 .block__one-column{
@@ -37,18 +47,11 @@ $block-icon-shadow: 2px 2px 8px $dark-grey-second;
     @extend .s12;    
 }
 
-.block__nav{
-    position: absolute;
-    left: 13px;
-    top: 20px;
-    display: block;
-    font-size: $nav-logo-size;
-    color: $nav-logo-color;
-}
-
 .presentation{
     position: relative;
-    top: 40%;
+    top: $presentation-top-lg;
+    max-width: $presentation-max-width;
+    width: 99%;
 }
 
 .presentation__leading{
@@ -133,7 +136,7 @@ $block-icon-shadow: 2px 2px 8px $dark-grey-second;
 
 @media #{$medium-and-down} {
     .presentation{
-        top: 40%;        
+        top: $presentation-top-md;
     }
 
     .presentation__leading{
@@ -147,7 +150,7 @@ $block-icon-shadow: 2px 2px 8px $dark-grey-second;
 
 @media #{$small-and-down} {
     .presentation{
-        top: 40%;        
+        top: $presentation-top-sm;        
     }
 
     .presentation__leading{
