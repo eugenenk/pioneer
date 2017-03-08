@@ -1,16 +1,18 @@
-$nav-logo-size: 26px;
-$nav-logo-color: $white;
-$nav-logo-padding: 0 6px;
-$nav-padding: 0 38px;
-$nav-title-top: 70px;
-$nav-list-top: 10px;
-$nav-list-padding: 0 10px !important;
+$nav-logo-size:         26px;
+$nav-logo-color:        $white;
+$nav-logo-padding:      0 6px;
+$nav-padding:           0 38px;
+$nav-title-top:         70px;
+
+$nav-list-top:          10px;
+$nav-list-top-sm:       0px;
+$nav-list-padding:      0 10px !important;
 $nav-list-small-height: 36px !important;
 
-$nav-devider-height: 1px;
-$nav-devider-bottom: 35px;
+$nav-devider-height:    1px;
+$nav-devider-bottom:    35px;
 
-$nav-footer-icon-size: 22px;
+$nav-footer-icon-size:  22px;
 
 .navoverlay{
     background: $dark-grey-second !important;
@@ -87,6 +89,7 @@ $nav-footer-icon-size: 22px;
 @media #{$small-and-down} {
     .navoverlay__navlist{
         line-height: $nav-list-small-height;
+        margin-top: $nav-list-top-sm;
     }
 
     .navoverlay__navlink{

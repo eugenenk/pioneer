@@ -6,9 +6,10 @@ $nav-logo-size: 26px;
 $nav-logo-color: $white;
 
 $block-leading-bottom: 30px;
-$block-left: 48px;
+$block-left: 0px;
 
 $block-icon-size: 88px;
+$block-icon-shadow: 2px 2px 8px $dark-grey-second;
 
 .block{
     @extend .row;
@@ -25,14 +26,14 @@ $block-icon-size: 88px;
 .block__two-column{
     @extend .col;
     @extend .l6;
-    @extend .m12;
+    @extend .m6;
     @extend .s12;
 }
 
 .block__three-column{
     @extend .col;
     @extend .l4;
-    @extend .m12;
+    @extend .m4;
     @extend .s12;    
 }
 
@@ -45,13 +46,12 @@ $block-icon-size: 88px;
     color: $nav-logo-color;
 }
 
-.block__presentation{
+.presentation{
     position: relative;
-    width: 70%;
     top: 40%;
 }
 
-.block__presentation__leading{
+.presentation__leading{
     font-family: $museosans-light;
     font-size: $font-size-base;
     color: $white;
@@ -60,12 +60,18 @@ $block-icon-size: 88px;
     margin-left: $block-left;
 }
 
-.block__presentation__title{
+.presentation__title{
     font-family: $parabola-regular;
     font-size: $font-size-large;
     color: $white;
     line-height: $font-height-large;
     margin-left: $block-left;
+}
+
+.block__icon i{
+    &:hover{
+        text-shadow: $block-icon-shadow;
+    }
 }
 
 .block__icon--sm-logo{
@@ -91,9 +97,13 @@ $block-icon-size: 88px;
 }
 
 .contact-card--reddish{
-    background: $reddish-grey;    
+    background: $reddish-grey;        
     .contact-card__header{
         color: $white;
+    }
+
+    .contact-card__divider{
+        background: $reddish-grey-dark;
     }
 }
 
@@ -106,7 +116,7 @@ $block-icon-size: 88px;
     margin: 15px auto; 
     width: 50%;
     height: 2px;
-    background: $dark-grey;
+    background: $grey-light-second;
 }
 
 .contact-card__link{
@@ -122,31 +132,29 @@ $block-icon-size: 88px;
 
 
 @media #{$medium-and-down} {
-    .block__presentation{
-        width: 90%;
+    .presentation{
         top: 40%;        
     }
 
-    .block__presentation__leading{
+    .presentation__leading{
         font-size: $font-size-base;
     }
 
-    .block__presentation__title{
+    .presentation__title{
         font-size: $font-size-large;
     }
 }
 
 @media #{$small-and-down} {
-    .block__presentation{
-        width: 90%;
+    .presentation{
         top: 40%;        
     }
 
-    .block__presentation__leading{
+    .presentation__leading{
         font-size: $font-size-small;
     }
 
-    .block__presentation__title{
+    .presentation__title{
         font-size: $font-size-base;
     }
 }

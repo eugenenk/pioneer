@@ -1,9 +1,9 @@
 
 $footer-height: 200px;
-$footer-padding-left: 48px;
+$footer-padding: 0 32px;
 
 $footer-logo-top: 90px;
-$footer-logo-small-top: 40px;
+$footer-logo-small-top: 70px;
 $footer-logo-size: 26px;
 $footer-logo-color: $white;
 
@@ -14,7 +14,7 @@ footer{
     height: $footer-height;
     background: $dark-grey;
     color: $reddish-grey;
-    padding-left: $footer-padding-left;
+    padding: $footer-padding;
 }
 
 .footer__logo{
@@ -33,5 +33,9 @@ footer{
 @media #{$small-and-down} {
     .footer__logo{
         padding-top: $footer-logo-small-top;
+    }
+
+    .footer__description{
+        font-size: $font-size-small;
     }
 }
