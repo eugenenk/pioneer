@@ -1,5 +1,6 @@
 [
   "bower_components/jquery/dist/jquery.js",
   "bower_components/materialize/dist/js/materialize.min.js",
-  "bower_components/materialize/dist/css/materialize.min.css"
-]
+  "bower_components/materialize/dist/css/materialize.min.css",
+  "bower_components/instafeed.js/instafeed.min.js"
+ ]

@@ -1,21 +1,55 @@
 /* ========================================================================
    Component: block.scss
  ========================================================================== */
+          
+$block-icon-size:                   88px;
+$block-icon-shadow:                 2px 2px 8px $dark-grey-second;
 
-$nav-logo-size:             26px;
-$nav-logo-color:            $white;
+// Presentation Values
+$presentation-max-width-xl:         1097px;
+$presentation-max-width-lg:         570px;
+$presentation-max-width-md:         570px;
+$presentation-max-width-sm:         235px;
 
-$block-leading-bottom:      30px;
-$block-left:                0px;
+$presentation-top-xl:               527px;
+$presentation-top-lg:               230px;
+$presentation-top-md:               406px;
+$presentation-top-sm:               230px;
 
-$block-icon-size:           88px;
-$block-icon-shadow:         2px 2px 8px $dark-grey-second;
+$presentation-left-xl:              100px;
+$presentation-left-lg:              50px;
+$presentation-left-md:              50px;
+$presentation-left-sm:              35px;
 
-$presentation-max-width:    670px;
+$presentation-leading-size-xl:      48px;
+$presentation-leading-size-lg:      24px;
+$presentation-leading-size-md:      24px;
+$presentation-leading-size-sm:      16px;
 
-$presentation-top-lg:       250px;
-$presentation-top-md:       250px;
-$presentation-top-sm:       150px;
+$presentation-leading-height-xl:    72px;
+$presentation-leading-height-lg:    30px;
+$presentation-leading-height-md:    30px;
+$presentation-leading-height-sm:    20px;
+
+$presentation-leading-bottom-xl:    90px;
+$presentation-leading-bottom-lg:    40px;
+$presentation-leading-bottom-md:    40px;
+$presentation-leading-bottom-sm:    25px;
+
+$presentation-title-size-xl:      80px;
+$presentation-title-size-lg:      40px;
+$presentation-title-size-md:      48px;
+$presentation-title-size-sm:      32px;
+
+$presentation-title-height-xl:    90px;
+$presentation-title-height-lg:    50px;
+$presentation-title-height-md:    48px;
+$presentation-title-height-sm:    32px;
+
+$contact-devider-xl:              15px auto;
+$contact-devider-lg:              10px auto;
+$contact-devider-md:              10px auto;
+$contact-devider-sm:              5px auto;
 
 .block{
     @extend .row;
@@ -50,31 +84,26 @@ $presentation-top-sm:       150px;
 .presentation{
     position: relative;
     top: $presentation-top-lg;
-    max-width: $presentation-max-width;
-    width: 99%;
+    max-width: $presentation-max-width-xl;
+    padding-left: $presentation-left-xl;
 }
 
 .presentation__leading{
     font-family: $museosans-light;
-    font-size: $font-size-base;
+    font-size: $presentation-leading-size-xl;
     color: $white;
-    line-height: $font-height-base;
-    margin-bottom: $block-leading-bottom;
-    margin-left: $block-left;
+    line-height: $presentation-leading-height-xl;
+    margin-bottom: $presentation-leading-bottom-xl;
 }
 
 .presentation__title{
     font-family: $parabola-regular;
-    font-size: $font-size-large;
+    font-size: $presentation-title-size-xl;
     color: $white;
-    line-height: $font-height-large;
-    margin-left: $block-left;
+    line-height: $presentation-title-height-xl;
 }
 
 .block__icon i{
-    &:hover{
-        text-shadow: $block-icon-shadow;
-    }
 }
 
 .block__icon--sm-logo{
@@ -116,7 +145,7 @@ $presentation-top-sm:       150px;
 }
 
 .contact-card__divider{
-    margin: 15px auto; 
+    margin: $contact-devider-xl; 
     width: 50%;
     height: 2px;
     background: $grey-light-second;
@@ -133,31 +162,76 @@ $presentation-top-sm:       150px;
     vertical-align: middle;
 }
 
+/***************Block Responsive******************************/
 
-@media #{$medium-and-down} {
+// Default Desktop
+@media #{$large-and-down} {
     .presentation{
-        top: $presentation-top-md;
+        top: $presentation-top-lg;
+        max-width: $presentation-max-width-lg;
+        padding-left: $presentation-left-lg;
     }
 
     .presentation__leading{
-        font-size: $font-size-base;
+        font-size: $presentation-leading-size-lg;
+        line-height: $presentation-leading-height-lg;
+        margin-bottom: $presentation-leading-bottom-lg;
     }
 
     .presentation__title{
-        font-size: $font-size-large;
+        font-size: $presentation-title-size-lg;
+        line-height: $presentation-title-height-lg;
+    }
+
+    .contact-card__divider{
+        margin: $contact-devider-lg; 
     }
 }
 
-@media #{$small-and-down} {
+// Tablet
+@media #{$medium-and-down} {
     .presentation{
-        top: $presentation-top-sm;        
+        top: $presentation-top-md;
+        max-width: $presentation-max-width-md;
+        padding-left: $presentation-left-md;
     }
 
     .presentation__leading{
-        font-size: $font-size-small;
+        font-size: $presentation-leading-size-md;
+        line-height: $presentation-leading-height-md;
+        margin-bottom: $presentation-leading-bottom-md;
     }
 
     .presentation__title{
-        font-size: $font-size-base;
+        font-size: $presentation-title-size-md;
+        line-height: $presentation-title-height-md;
     }
+
+    .contact-card__divider{
+        margin: $contact-devider-md; 
+    }
+}
+
+// Mobile
+@media #{$small-and-down} {
+    .presentation{
+        top: $presentation-top-sm;        
+        max-width: $presentation-max-width-sm;
+        padding-left: $presentation-left-sm;
+    }
+
+    .presentation__leading{
+        font-size: $presentation-leading-size-sm;
+        line-height: $presentation-leading-height-sm;
+        margin-bottom: $presentation-leading-bottom-sm;
+    }
+
+    .presentation__title{
+        font-size: $presentation-title-size-sm;
+        line-height: $presentation-title-height-sm;
+    }
+
+    .contact-card__divider{
+        margin: $contact-devider-sm; 
+    }    
 }

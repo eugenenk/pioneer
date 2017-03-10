@@ -1,25 +1,89 @@
-$nav-logo-size:         26px;
-$nav-logo-color:        $white;
-$nav-logo-padding:      0 6px;
-$nav-padding:           0 38px;
-$nav-title-top:         70px;
+$nav-logo-size-xl:          46px !important;
+$nav-logo-size-lg:          26px !important;
+$nav-logo-size-md:          26px !important;
+$nav-logo-size-sm:          26px !important;
 
-$nav-list-top:          10px;
-$nav-list-top-sm:       0px;
-$nav-list-padding:      0 10px !important;
-$nav-list-small-height: 36px !important;
+$nav-logo-width-sm:         10px;
 
-$nav-devider-height:    1px;
-$nav-devider-bottom:    35px;
+$nav-bar-left-xl:           26px;
+$nav-bar-left-lg:           10px;
+$nav-bar-left-md:           10px;
+$nav-bar-left-sm:           15px;
 
-$nav-footer-icon-size:  22px;
+$nav-bar-top-xl:            35px;
+$nav-bar-top-lg:            25px;
+$nav-bar-top-md:            25px;
+$nav-bar-top-sm:            25px;
+
+$nav-logo-padding-xl:       0 20px;
+$nav-logo-padding-lg:       0 6px;
+$nav-logo-padding-md:       0 6px;
+$nav-logo-padding-sm:       0px;
+
+$nav-padding-xl:            0 100px;
+$nav-padding-lg:            0 38px;
+$nav-padding-md:            0 38px;
+$nav-padding-sm:            0 35px;
+
+$nav-title-top-xl:          160px;
+$nav-title-top-lg:          100px;
+$nav-title-top-md:          70px;
+$nav-title-top-sm:          70px;
+
+$nav-title-size-xl:         48px;
+$nav-title-size-lg:         24px;
+$nav-title-size-md:         24px;
+$nav-title-size-sm:         24px;
+
+$nav-list-top-xl:           50px;
+$nav-list-top-lg:           20px;
+$nav-list-top-md:           10px;
+$nav-list-top-sm:           0px;
+
+$nav-link-size-xl:          32px !important;
+$nav-link-size-lg:          16px !important;
+$nav-link-size-md:          16px !important;
+$nav-link-size-sm:          16px !important;
+
+$nav-link-height-xl:        48px !important;
+$nav-link-height-lg:        24px !important;
+$nav-link-height-md:        24px !important;
+$nav-link-height-sm:        24px !important;
+
+$nav-devider-margin-xl:     50px 0;
+$nav-devider-margin-lg:     45px 0;
+$nav-devider-margin-md:     45px 0;
+$nav-devider-margin-sm:     30px 0;
+
+$nav-logo-color:            $white;
+$nav-list-padding:          0 !important;
+
+$nav-list-small-height:     36px !important;
+
+$nav-devider-height:        1px;
+
+$nav-footer-icon-size-xl:   40px;
+$nav-footer-icon-size-lg:   22px;
+$nav-footer-icon-size-md:   22px;
+$nav-footer-icon-size-sm:   22px;
+
+$nav-footer-size-xl:        36px;
+$nav-footer-size-lg:        22px;
+$nav-footer-size-md:        22px;
+$nav-footer-size-sm:        22px;
+
+$nav-footer-gap-xl:         40px;
+$nav-footer-gap-lg:         40px;
+$nav-footer-gap-md:         40px;
+$nav-footer-gap-sm:         30px;
 
 .nav-bar{
     position: absolute;
-    left: 13px;
-    top: 20px;
+    left: $nav-bar-left-xl;
+    top: $nav-bar-top-xl;
     display: block;
-    font-size: $nav-logo-size;
+    font-size: $nav-logo-size-xl;
+    line-height: $nav-logo-size-xl;
     color: $nav-logo-color;
     z-index: 100;
     
@@ -31,24 +95,28 @@ $nav-footer-icon-size:  22px;
 .navoverlay{
     background: $dark-grey-second !important;
     width: 100% !important;
-    padding: $nav-padding !important;
+    padding: $nav-padding-xl !important;
 }
 
 .navoverlay__navicon{
     position: absolute;
-    left: 13px;
-    top: 20px;
+    left: $nav-bar-left-xl;
+    top: $nav-bar-top-xl;
+    font-size: $nav-logo-size-xl;
+    line-height: $nav-logo-size-xl;
     display: block;
-    font-size: $nav-logo-size;
     color: $nav-logo-color;        
     a{            
         display: inline;
-        font-size: $nav-logo-size;
-        padding: $nav-logo-padding;
+        font-size: $nav-logo-size-xl;
+        padding: $nav-logo-padding-xl;
+        line-height: $nav-logo-size-xl;
         cursor: pointer;
         i{
             margin: 0 !important;
             color: $nav-logo-color !important;  
+            height: $nav-logo-size-xl;
+            line-height: $nav-logo-size-xl;
         }
     }
 }
@@ -56,19 +124,20 @@ $nav-footer-icon-size:  22px;
 .navoverlay__title{
     color: $grey-normal-second;
     font-family: $museosans-light;
-    font-size: $font-size-base;
-    margin-top: $nav-title-top;
-    padding: $nav-list-padding;
+    font-size: $nav-title-size-xl;
+    line-height: $nav-logo-size-xl;
+    margin-top: $nav-title-top-xl;
 }
 
 .navoverlay__navlist{
-    margin-top: $nav-list-top;
+    margin-top: $nav-list-top-xl;
 }
 
 .navoverlay__navlink{
     color: $white !important;
     font-family: $museosans-regular;
-    font-size: $font-size-small !important;
+    font-size: $nav-link-size-xl;
+    line-height: $nav-link-height-xl;
     padding: $nav-list-padding;
     cursor: pointer;
 }
@@ -76,31 +145,244 @@ $nav-footer-icon-size:  22px;
 .navoverlay__description{
     color: $grey-normal-second !important;
     font-family: $museosans-light;
-    font-size: $font-size-small;
+    font-size: $nav-link-size-xl;
+    line-height: $nav-link-height-xl;
     padding: $nav-list-padding;
     vertical-align: top;
-    line-height: $font-height-small;
 }
 
 .navoverlay__divider{
     height: $nav-devider-height;
     background: $warm-grey;
     width: 60%;
-    margin-bottom: $nav-devider-bottom;
+    margin: $nav-devider-margin-xl;
 }
 
 .navoverlay__footer{
     font-family: $museosans-regular;
-    font-size: $font-size-base;
+    font-size: $nav-footer-size-xl;
     color: $warm-grey;
     i{
         color: $warm-grey;
-        font-size: $nav-footer-icon-size;
+        font-size: $nav-footer-icon-size-xl;
     }
 }
 
+.navoverlay__instagram{
+    line-height: $nav-link-height-xl;
+    display: inline-block;    
+    padding-right: $nav-footer-gap-xl;
+}
 
+.navoverlay__contact{
+    line-height: $nav-link-height-xl;
+    vertical-align: top;
+    display: inline-block;    
+    padding-left: $nav-footer-gap-xl;
+    border-left: 2px solid $warm-grey;
+}
+
+// Default Desktop
+@media #{$large-and-down} {
+    .nav-bar{
+        font-size: $nav-logo-size-lg;
+        line-height: $nav-logo-size-lg;
+        left: $nav-bar-left-lg;
+        top: $nav-bar-top-lg;
+    }
+
+    .navoverlay__navlist{
+        margin-top: $nav-list-top-lg;
+    }
+
+    .navoverlay__navlink,
+    .navoverlay__description{
+        font-size: $nav-link-size-lg;
+        line-height: $nav-link-height-lg;
+        height: $nav-link-height-lg;
+    }
+
+    .navoverlay{
+        padding: $nav-padding-lg !important;
+    }
+
+    .navoverlay__navicon{
+        left: $nav-bar-left-lg;
+        top: $nav-bar-top-lg;
+        font-size: $nav-logo-size-lg;
+        line-height: $nav-logo-size-lg;
+
+        a{
+            font-size: $nav-logo-size-lg;
+            padding: $nav-logo-padding-lg;
+            line-height: $nav-logo-size-lg;
+            i{
+                height: $nav-logo-size-lg;
+                line-height: $nav-logo-size-lg;
+            }            
+        }
+    }
+
+    .navoverlay__title{
+        font-size: $nav-title-size-lg;
+        margin-top: $nav-title-top-lg;
+    }
+
+    .navoverlay__divider{
+        margin: $nav-devider-margin-lg;
+    }
+
+    .navoverlay__instagram{
+        line-height: $nav-link-height-lg;
+        padding-right: $nav-footer-gap-lg;
+    }
+
+    .navoverlay__contact{
+        line-height: $nav-link-height-lg;
+        padding-left: $nav-footer-gap-lg;
+    }
+
+    .navoverlay__footer{
+        font-size: $nav-footer-size-lg;
+        line-height: $nav-link-height-lg;
+        height: $nav-link-height-lg;
+        i{
+            font-size: $nav-footer-icon-size-lg;
+            line-height: $nav-link-height-lg;
+            height: $nav-link-height-lg;
+        }
+    }
+}
+
+// Tablet
+@media #{$medium-and-down} {
+    .nav-bar{
+        font-size: $nav-logo-size-md;        
+        line-height: $nav-logo-size-md;
+        left: $nav-bar-left-md;
+        top: $nav-bar-top-md;        
+    }
+
+    .navoverlay__navlist{
+        margin-top: $nav-list-top-md;
+    }
+
+    .navoverlay__navlink,
+    .navoverlay__description{
+        font-size: $nav-link-size-md;
+        line-height: $nav-link-height-md;
+        height: $nav-link-height-md;
+    }
+
+    .navoverlay{
+        padding: $nav-padding-md !important;
+    }
+
+    .navoverlay__title{
+        font-size: $nav-title-size-md;
+        margin-top: $nav-title-top-md;
+    }
+
+    .navoverlay__navicon{
+        left: $nav-bar-left-md;
+        top: $nav-bar-top-md;
+        font-size: $nav-logo-size-md;
+        line-height: $nav-logo-size-md;
+
+        a{
+            font-size: $nav-logo-size-md;
+            padding: $nav-logo-padding-md;
+            line-height: $nav-logo-size-md;
+            i{
+                height: $nav-logo-size-md;
+                line-height: $nav-logo-size-md;
+            }            
+        }
+    }
+
+    .navoverlay__divider{
+        margin: $nav-devider-margin-md;
+    }
+
+    .navoverlay__instagram{
+        line-height: $nav-link-height-md;
+        padding-right: $nav-footer-gap-md;
+    }
+
+    .navoverlay__contact{
+        line-height: $nav-link-height-md;
+        padding-left: $nav-footer-gap-md;
+    }
+
+    .navoverlay__footer{
+        font-size: $nav-footer-size-md;
+        line-height: $nav-link-height-md;
+        height: $nav-link-height-md;
+        i{
+            font-size: $nav-footer-icon-size-md;
+            line-height: $nav-link-height-md;
+            height: $nav-link-height-md;
+        }
+    }
+
+}
+
+// Mobile
 @media #{$small-and-down} {
+    .nav-bar{
+        font-size: $nav-logo-size-sm;        
+        line-height: $nav-logo-size-sm;
+        left: $nav-bar-left-sm;
+        top: $nav-bar-top-sm;
+
+        .icon-nav:before{
+            width: $nav-logo-width-sm;
+        }
+    }
+
+    .navoverlay__navlist{
+        margin-top: $nav-list-top-sm;
+    }
+
+    .navoverlay__navlink,
+    .navoverlay__description{
+        font-size: $nav-link-size-sm;
+        line-height: $nav-link-height-sm;
+        height: $nav-link-height-sm;
+    }
+
+    .navoverlay{
+        padding: $nav-padding-sm !important;
+    }
+
+    .navoverlay__title{
+        font-size: $nav-title-size-sm;
+        margin-top: $nav-title-top-sm;
+    }
+
+    .navoverlay__navicon{
+        left: $nav-bar-left-sm;
+        top: $nav-bar-top-sm;
+        font-size: $nav-logo-size-sm;
+        line-height: $nav-logo-size-sm;
+
+        .icon-nav-back:before{
+            width: $nav-logo-width-sm;
+            margin-left: 0;
+        }
+
+        a{
+            font-size: $nav-logo-size-sm;
+            padding: $nav-logo-padding-sm;            
+            line-height: $nav-logo-size-sm;
+            i{
+                height: $nav-logo-size-sm;
+                line-height: $nav-logo-size-sm;
+                width: auto !important;
+            }            
+        }
+    }
+
     .navoverlay__navlist{
         line-height: $nav-list-small-height;
         margin-top: $nav-list-top-sm;
@@ -110,4 +392,29 @@ $nav-footer-icon-size:  22px;
         height: $nav-list-small-height;
         line-height: $nav-list-small-height;
     }
+
+    .navoverlay__divider{
+        margin: $nav-devider-margin-sm;
+    }
+
+    .navoverlay__instagram{
+        line-height: $nav-link-height-sm;
+        padding-right: $nav-footer-gap-sm;
+    }
+
+    .navoverlay__contact{
+        line-height: $nav-link-height-sm;
+        padding-left: $nav-footer-gap-sm;
+    }
+
+    .navoverlay__footer{
+        font-size: $nav-footer-size-sm;
+        line-height: $nav-link-height-sm;
+        height: $nav-link-height-sm;
+        i{
+            font-size: $nav-footer-icon-size-sm;
+            line-height: $nav-link-height-sm;
+            height: $nav-link-height-sm;
+        }
+    }    
 }
